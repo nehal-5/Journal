@@ -3,58 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My Journal</title>
+    <title>Journal App</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>My Personal Journal</h1>
-        <p>Documenting my thoughts, experiences, and creative journey.</p>
-    </header>
+    <div class="container">
+        <h2>My Journal</h2>
+        <textarea id="entryText" placeholder="Write your journal entry..."></textarea>
+        <button id="saveEntry">Save Entry</button>
+        <div id="entries"></div>
+    </div>
     
-    <main id="main-content">
-        <!-- Login Form (visible only if the user is not logged in) -->
-        <section id="login-section">
-            <h2>Login</h2>
-            <form id="login-form">
-                <label for="username">Username:</label>
-                <input type="text" id="username" required>
-                
-                <label for="password">Password:</label>
-                <input type="password" id="password" required>
-                
-                <button type="submit">Login</button>
-            </form>
-            <p id="login-error" style="color: red; display: none;">Invalid username or password.</p>
-        </section>
-
-        <!-- Journal Entries Section (visible only if the user is logged in) -->
-        <section id="entries-section" style="display: none;">
-            <h2>Recent Entries</h2>
-            <div id="entry-list">
-                <!-- Journal entries will appear here -->
-            </div>
-
-            <section id="new-entry">
-                <h2>Post a New Entry</h2>
-                <form id="entry-form">
-                    <label for="entry-title">Title:</label>
-                    <input type="text" id="entry-title" required>
-                    
-                    <label for="entry-content">Content:</label>
-                    <textarea id="entry-content" rows="5" required></textarea>
-                    
-                    <button type="submit">Submit</button>
-                </form>
-            </section>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 My Journal. All rights reserved.</p>
-    </footer>
-
-    <script src="script.js"></script>
+    <script src="firebase-config.js" type="module"></script>
+    <script src="script.js" type="module"></script>
 </body>
 </html>
