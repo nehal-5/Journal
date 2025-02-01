@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", async function() {
         querySnapshot.forEach((doc) => {
             let entry = document.createElement("div");
             entry.classList.add("entry");
-            entry.innerHTML = `<p>${doc.data().text}</p>`;
+            entry.innerHTML = `<ul><li>${doc.data().text}</li></ul>`;
             entriesDiv.appendChild(entry);
         });
     }
